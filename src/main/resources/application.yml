@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: RetroRomsDatabase
+  datasource:
+    url: jdbc:hsqldb:hsql://localhost/retroRoms
+    username: sa
+    password:
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 10
+      minimumIdle: 10
+      connectionTimeout: 30000 #30 seconds
+      idleTimeout: 600000 #10 minutes
+      maxLifetime: 1800000 #30 minutes
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        formate_sql=true;:
