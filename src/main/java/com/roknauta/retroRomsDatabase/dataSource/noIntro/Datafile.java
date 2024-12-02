@@ -1,25 +1,19 @@
 package com.roknauta.retroRomsDatabase.dataSource.noIntro;
 
-import jakarta.xml.bind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import jakarta.xml.bind.annotation.XmlElement;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.List;
 
-
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {"game"})
-@XmlRootElement(name = "datafile")
+@JacksonXmlRootElement(localName = "datafile")
+@Getter
+@Setter
 public class Datafile {
 
-    @XmlElement(required = true)
+    @JacksonXmlElementWrapper(useWrapping = false)
     protected List<Game> game;
-
-    public List<Game> getGame() {
-        if (game == null) {
-            game = new ArrayList<>();
-        }
-        return this.game;
-    }
-
-
 }

@@ -1,6 +1,5 @@
 package com.roknauta.retroRomsDatabase;
 
-import com.roknauta.retroRomsDatabase.service.GameService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -1,134 +1,47 @@
 package com.roknauta.retroRomsDatabase.dataSource.noIntro;
 
-import jakarta.xml.bind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "")
+@Getter
+@Setter
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class Archive {
 
-    @XmlAttribute(name = "number", required = true)
-    @XmlSchemaType(name = "unsignedByte")
-    protected String number;
-    @XmlAttribute(name = "clone", required = true)
-    protected String clone;
-    @XmlAttribute(name = "regparent")
-    protected String regparent;
-    @XmlAttribute(name = "name", required = true)
-    protected String name;
-    @XmlAttribute(name = "region", required = true)
-    protected String region;
-    @XmlAttribute(name = "languages", required = true)
-    protected String languages;
-    @XmlAttribute(name = "sticky_note")
-    protected String stickyNote;
-    @XmlAttribute(name = "devstatus")
-    protected String devstatus;
-    @XmlAttribute(name = "complete")
-    @XmlSchemaType(name = "unsignedByte")
-    protected Short complete;
-    @Getter
-    @Setter
-    @XmlAttribute(name = "version1")
-    protected String version1;
-    @Getter
-    @Setter
-    @XmlAttribute(name = "bios")
-    protected String bios;
-    @Getter
-    @Setter
-    @XmlAttribute(name = "licensed")
-    protected String licensed;
-
-
-    public String getNumber() {
-        return number;
-    }
-
-
-    public void setNumber(String value) {
-        this.number = value;
-    }
-
-
-    public String getClone() {
-        return clone;
-    }
-
-
-    public void setClone(String value) {
-        this.clone = value;
-    }
-
-
-    public String getRegparent() {
-        return regparent;
-    }
-
-
-    public void setRegparent(String value) {
-        this.regparent = value;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-
-    public void setName(String value) {
-        this.name = value;
-    }
-
-
-    public String getRegion() {
-        return region;
-    }
-
-
-    public void setRegion(String value) {
-        this.region = value;
-    }
-
-
-    public String getLanguages() {
-        return languages;
-    }
-
-
-    public void setLanguages(String value) {
-        this.languages = value;
-    }
-
-
-    public String getStickyNote() {
-        return stickyNote;
-    }
-
-
-    public void setStickyNote(String value) {
-        this.stickyNote = value;
-    }
-
-
-    public String getDevstatus() {
-        return devstatus;
-    }
-
-
-    public void setDevstatus(String value) {
-        this.devstatus = value;
-    }
-
-
-    public Short getComplete() {
-        return complete;
-    }
-
-
-    public void setComplete(Short value) {
-        this.complete = value;
-    }
+    private String number;
+    private String regparent;
+    private String licensed;
+    private String languages;
+    private String langchecked;
+    private String clone;
+    private String name;
+    private String categories;
+    private String region;
+    @JsonProperty("name_alt")
+    private String nameAlt;
+    private String version1;
+    private String physical;
+    private String aftermarket;
+    private String devstatus;
+    private String complete;
+    private String special2;
+    private String special1;
+    private String additional;
+    private String showlang;
+    private String bios;
+    @JsonProperty("sticky_note")
+    private String stickyNote;
+    private String version2;
+    @JsonProperty("datter_note")
+    private String datterNote;
+    private String alt;
+    private String dat;
+    private String adult;
+    private String gameid1;
+    private String description;
+    private String mergeof;
+    private String listed;
 
 }

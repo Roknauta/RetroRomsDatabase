@@ -2,6 +2,7 @@ package com.roknauta.retroRomsDatabase.utils;
 
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -43,7 +44,8 @@ public class AppFileUtils {
     }
 
     public static List<String> getRegionsList(String fullName) {
-        return Arrays.stream(getRegions(fullName).split(",")).map(String::trim).collect(Collectors.toList());
+        String regions = getRegions(fullName);
+        return regions==null?new ArrayList<>():Arrays.stream(regions.split(",")).map(String::trim).collect(Collectors.toList());
     }
 
     public static List<String> getKeywords(String fullName) {
