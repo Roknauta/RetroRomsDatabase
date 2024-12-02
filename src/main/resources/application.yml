@@ -1,3 +1,6 @@
+server:
+  port: 7000
+
 spring:
   application:
     name: RetroRomsDatabase
@@ -20,3 +23,11 @@ spring:
     properties:
       hibernate:
         formate_sql=true:
+
+joinfaces:
+  primefaces:
+    theme: saga
+  faces:
+    project-stage: Development
+  myfaces:
+    resource-bundle-control: jsf

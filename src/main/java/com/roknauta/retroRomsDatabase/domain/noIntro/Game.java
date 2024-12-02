@@ -35,4 +35,15 @@ public class Game {
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(foreignKey = @ForeignKey(name = "Fk_game_rom"))
     private Rom rom;
+
+    public Game(String system, String name, String gameId, String cloneOfGameId, Integer version, List<String> regions,
+        boolean valid) {
+        this.system = system;
+        this.name = name;
+        this.gameId = gameId;
+        this.cloneOfGameId = cloneOfGameId;
+        this.version = version;
+        this.regions = regions;
+        this.valid = valid;
+    }
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui" xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+    <title>#{msg['title']}</title>
+</h:head>
+<h:body>
+    <h:form>
+        <p:messages id="messages" showDetail="true" closable="true">
+            <p:autoUpdate/>
+        </p:messages>
+        <p:panel id="panel">
+            <p:tabView dynamic="true">
+                <p:tab title="Cadastro">
+                    <p:panel header="Painel">
+                        <h:panelGrid columns="1">
+                            <p:outputLabel value="#{msg['name']}" for="@next"/>
+                            <p:inputText id="nome" value="Test"/>
+                        </h:panelGrid>
+                        <p:commandButton value="#{msg['save']}" />
+                    </p:panel>
+                </p:tab>
+                <p:tab title="Extração">
+                </p:tab>
+                <p:tab title="Seleção">
+                </p:tab>
+            </p:tabView>
+        </p:panel>
+    </h:form>
+</h:body>
+</html>

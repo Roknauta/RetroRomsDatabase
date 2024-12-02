@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<f:view locale="#{inicioController.language}">
+    <ui:insert name="head">
+        <ui:include src="header.xhtml"/>
+    </ui:insert>
+    <h:body>
+        <h:form id="locale">
+            <p:outputPanel style="float: right">
+                <!--<p:selectOneMenu value="#{inicioController.language}">
+                    <f:selectItems value="#{inicioController.locales}" var="bean" itemLabel="#{bean.displayLanguage}"
+                                   itemValue="#{bean.language}"/>
+                    <p:column style="width:10%">
+&lt;!&ndash;                        <h:graphicImage library="images" styleClass="ui-theme" value="pt.jpg"/>&ndash;&gt;
+                    </p:column>
+                    <p:ajax event="change" listener="#{inicioController.changeLanguage}" update="@all"/>
+                </p:selectOneMenu>-->
+            </p:outputPanel>
+        </h:form>
+        <ui:insert name="content"/>
+        <ui:insert name="footer">
+            <ui:include src="footer.xhtml"/>
+        </ui:insert>
+    </h:body>
+</f:view>
+</html>
